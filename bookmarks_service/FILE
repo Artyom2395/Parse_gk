@@ -1,0 +1,8 @@
+[2023-11-02 10:40:58,097] INFO:huey.consumer:MainThread:Huey consumer started with 1 thread, PID 7208 at 2023-11-02 07:40:58.097012
+[2023-11-02 10:40:58,097] INFO:huey.consumer:MainThread:Scheduler runs every 1 second(s).
+[2023-11-02 10:40:58,098] INFO:huey.consumer:MainThread:Periodic tasks are enabled.
+[2023-11-02 10:40:58,098] INFO:huey.consumer:MainThread:The following commands are available:
+[2023-11-02 10:42:20,748] INFO:huey.consumer:MainThread:Received SIGINT
+[2023-11-02 10:42:20,762] INFO:huey.consumer:MainThread:Shutting down gracefully...
+[2023-11-02 10:42:21,529] INFO:huey.consumer:MainThread:All workers have stopped.
+[2023-11-02 10:42:21,531] INFO:huey.consumer:MainThread:Consumer exiting.
