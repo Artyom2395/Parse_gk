@@ -1,0 +1,47 @@
+{% extends "bookmarks/base.html" %}
+{% load static %}
+
+{% block content %}
+<body id="home">
+    <div class="container tm-home-mt tm-home-container">
+        <div class="row">
+            <div class="col-12">
+                <div class="tm-home-left">
+                    <h1 class="tm-site-title">Добавь закладку</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <div class="tm-home-left mt-3 font-weight-light">
+                    <p class="tm-mb-35">Сервис для добавления закладок в виде ссылок, и получения информации из них</p>
+                    <p>Регистрируйся!</p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                <ul class="list-group tm-home-list tm-bg-black font-weight-light">
+                    {% if not user.is_authenticated %}
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'register' %}" class="tm-white-text">Регистрация</a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'login' %}" class="tm-white-text">Вход</a>
+                    </li>
+                    {% else %}
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'logout' %}" class="tm-white-text">Выход</a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'bookmark_list' %}" class="tm-white-text">Добавить закладку</a>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center">
+                        <a href="{% url 'bookmarks_list' %}" class="tm-white-text">Посмотреть свои закладки</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

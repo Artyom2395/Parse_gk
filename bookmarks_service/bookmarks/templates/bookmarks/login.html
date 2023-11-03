@@ -1,0 +1,51 @@
+{% extends "bookmarks/base.html" %}
+{% load static %}
+
+{% block login %}
+
+
+<body id="login">
+    <div class="container">
+        <div class="row tm-register-row tm-mb-35">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-l">
+                <form action="" method="post" class="tm-bg-black p-5 h-100">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        {{form.username}}
+                    </div>
+                    <div class="input-field mb-5">
+                        {{form.password}}
+                    </div>
+                    <div class="tm-flex-lr">
+                        <a href="#" class="white-text small">Forgot Password?</a>
+                        <button type="submit" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 tm-login-r">
+                <header class="font-weight-light tm-bg-black p-5 h-100">
+                    <h3 class="mt-0 text-white font-weight-light">Ваш логин</h3>
+                    
+                    <a href="{% url 'index' %}"><p>Главная</p></a>
+    
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 ml-auto mr-0 text-center">
+                <a href="{% url 'register' %}" class="waves-effect btn-large btn-large-white px-4 black-text rounded-0">Create New Account</a>
+            </div>
+        
+
+    <script src="{% static 'bookmarks/js/jquery-3.2.1.slim.min.js' %}"></script>
+    <script src="{% static 'bookmarks/js/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+</body>
+
+</html>
+
+{% endblock %}

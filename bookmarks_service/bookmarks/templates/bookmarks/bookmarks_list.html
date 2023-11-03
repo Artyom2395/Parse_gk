@@ -1,0 +1,34 @@
+
+
+{% extends "bookmarks/base.html" %}
+{% load static %}
+
+{% block list %}
+    <div class="container">
+      <h1 class="my-3">Последние закладки</h1>
+      <div class="row">
+        {% for bookmark in bookmarks %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="tm-bg-black">
+              <h4 class="card-title">ссылка:{{ bookmark.url }}</h4>
+              <div>
+                <h4 class="card-title">title: {{ bookmark.title }}</h4>
+              </div>
+              {{ bookmark.description|safe|truncatechars:100 }}
+              <div>
+                <img src="{{ bookmark.favicon.url }}" alt="" class="" height="50" width="50">
+              </div>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+            <p>Нет закладок</p>
+        {% endfor %}
+      </div>
+        <div>
+          <a href="{% url 'index' %}" class="tm-white-text">Назад</a>
+        </div>
+    </div>
+{% endblock %}
+
