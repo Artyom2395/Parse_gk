@@ -3,10 +3,10 @@
 Для установки проекта выполните следующие шаги:
 
 Клонируйте репозиторий:
-git clone <repo>
+```git clone <repo>```
 
 Перейдите в каталог проекта:
-cd your-project-folder
+```cd your-project-folder```
 
 Установите зависимости с помощью pip:
 pip install -r requirements.txt
@@ -44,4 +44,4 @@ python manage.py runserver
 логин: artyr
 пароль: 124689Artyr
 
-в кчасевте шаблона за основу был взят http://www.tooplate.com/view/2105-input
+в качестве шаблона за основу был взят http://www.tooplate.com/view/2105-input
